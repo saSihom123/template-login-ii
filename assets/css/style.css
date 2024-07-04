@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+:root{
+    --large-size-text: clamp(4rem, 5vmax, 6rem);
+    --medium-size-text: clamp(3.5rem, 4vmax, 4.5vmax);
+    --sub-small-size-text: clamp(2rem, 3vmax, 3.5rem);
+    --small-size-text: clamp(1.2rem, 1.5vmax, 1.5rem);
+    --first-color:#393E46;
+    --second-color:#929AAB;
+    --third-color:#EEEEEE;
+    --four-color:#F7F7F7;
+}
+img{
+    width: 1.35vw;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.title-header{
+    font-size: var(--large-size-text);
+    color: var(--four-color);
+    font-weight: 800;
+}.title-header{
+    font-size: var(--large-size-text);
+    color: var(--four-color);
+    font-weight: 800;
+}
+body{
+    background:url("/assets/img/bg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    padding: 1.25rem 3.5rem;
+    background-color: var(--first-color);
+    font-size: 1.5rem;
+    color: var(--four-color);
+    font-weight: bold;
+    border-radius: .5rem;
+
+}
+/*HEADER WEBSITE*/
+header{
+    width: 100%;
+    border-bottom: .5rem solid var(--f);
+    background-color: rgba(57, 62, 70, .5);
+    backdrop-filter: blur(5px);
+    padding: 2.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header i{
+    font-size: 2vw;
+    color: var(--second-color);
+    transition: .5s;
+}
+header i:hover{
+    color: var(--third-color);
+    text-shadow: 0 0 .3rem var(--first-color);
+}
+/*CONTAINER WEBSITE*/
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: var(--four-color);
+    overflow: hidden;
+    border-radius: .5rem;
+    width: max(450px, 65vw);
+    min-height: 60vh;
+}
+/* LEFT CONTAINER WEBSITE*/
+.lt-container{
+    background:url("/assets/img/left-bg.jpg") no-repeat;
+    background-position: center;
+    background-size:cover ;
+    flex: 2 1;
+    padding: 7.5rem 12rem 0rem 5rem;
+}
+.lt-container p{
+    font-size: var(--small-size-text);
+    color: var(--four-color);
+    padding: 2rem 0rem;
+}
+/* RIGHT CONTAINER WEBSITE*/
+.rt-container{
+    flex: 1 2;
+    padding: 3rem;
+}
+.rt-container .title-header{
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--first-color);
+    margin-bottom: 2.5rem;
+}
+.rt-container hr{
+    width: 100%;
+    height: .3rem;
+    background-color: var(--first-color);
+    border-radius: 1rem;
+    border: none;
+}
+.wrapper-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.box-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.box-form .title-text{
+    font-size: var(--small-size-text);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.box-form .box-input-form{
+    background-color: var(--third-color);
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    transition: .5s;
+}
+.box-input-form:focus{
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem .2rem var(--second-color);
+}
+.box-form input[type="password"] ~ label[for="check"]{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+label[for="check"] input#check{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+label[for="check"] span{
+    font-size: var(--small-size-text);
+}
+.btn-login{
+    margin-top: 1rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+/* WRAPPER OTHER CONTAINER */
+.wrapper-other-login h2{ 
+    font-size: clamp(1.2rem, 1.5vmax, 1.8rem);
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--first-color);
+}
+.sub-wrapper-other-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.sub-wrapper-other-login a{
+    display: flex;
+    gap: 1.25rem;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 1.15rem 2rem;
+    border-radius: .5rem;
+}
+.sub-wrapper-other-login a span{
+    font-size: var(--small-size-text);
+    font-weight: bold;
+    color: var(--four-color);
+}
+
+/* BREAKPOINT */
+@media screen and (max-width: 1440px) {
+    html{
+        font-size: 63%;
+        overflow-x: hidden;
+    }
+    .lt-container{
+        padding: 5.5rem 4.5rem 0rem 3.5rem;
+    }
+}
+@media screen and (max-width: 1288px) {
+    html{
+        font-size: 72.5%;
+        overflow-x: hidden;
+    }
+    img{
+        width: 2vw;
+    }
+    .container{
+        width: max(450px, 45vw);
+        min-height: 60vh;
+    }
+    .lt-container{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 75%;
+        overflow-x: hidden;
+    }
+    header{
+        background-color: #393E46;
+        position: fixed;
+        z-index: 10000;
+    }
+    header i{
+        font-size: 3.5vw;
+    }
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+    .rt-container{
+        flex: 1 2;
+        padding: 13rem 5rem 3rem;
+        
+    }
+    img{
+        width: 3vw;
+    }
+}
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 77.5%;
+        overflow-x: hidden;
+    }
+    header i{
+        font-size: 5.5vw;
+    }
+    img{
+        width: 5vw;
+    }
+    label[for="check"] input#check{
+        display: block;
+        width: 1.15rem;
+        height: 1.15rem;
+    }
+    .wrapper-other-login h2{ 
+        font-size: clamp(1.5rem, 1.5vmax, 1.8rem);
+    }
+    .sub-wrapper-other-login {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    .sub-wrapper-other-login a{
+        display: flex;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+    }
+    .sub-wrapper-other-login a span{
+        display: none;
+    }
+}
