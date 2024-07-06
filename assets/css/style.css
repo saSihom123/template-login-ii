@@ -208,7 +208,7 @@ label[for="check"] span{
         width: 2vw;
     }
     .container{
-        width: max(450px, 45vw);
+        width: max(450px, 40vw);
         min-height: 60vh;
     }
     .lt-container{
